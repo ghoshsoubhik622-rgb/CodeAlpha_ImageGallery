@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FrameFlow | Photo Gallery</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a class="brand" href="#">
+        <i class="fa-solid fa-camera"></i>
+        <span>FrameFlow</span>
+    </a>
+
+    <div class="header-actions">
+
+        <button id="randomBtn" title="Random photo">
+            <i class="fa-solid fa-shuffle"></i>
+        </button>
+
+        <button id="themeBtn" title="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">VISUAL COLLECTION</span>
+
+        <h1>
+            Stories captured<br>
+            <span>one frame at a time.</span>
+        </h1>
+
+        <p>
+            Explore a curated collection of photography from
+            nature, travel, cities, wildlife and everyday life.
+        </p>
+
+    </div>
+
+</section>
+
+
+<main>
+
+    <section class="toolbar">
+
+        <div class="search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search photos..."
+            >
+
+            <button id="clearSearch">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="filters" id="filters">
+
+            <button class="filter active" data-category="All">
+                All
+            </button>
+
+            <button class="filter" data-category="Nature">
+                Nature
+            </button>
+
+            <button class="filter" data-category="Travel">
+                Travel
+            </button>
+
+            <button class="filter" data-category="City">
+                City
+            </button>
+
+            <button class="filter" data-category="Animals">
+                Animals
+            </button>
+
+            <button class="filter" data-category="Ocean">
+                Ocean
+            </button>
+
+            <button class="filter" data-category="Sunset">
+                Sunset
+            </button>
+
+            <button class="filter" data-category="Mountains">
+                Mountains
+            </button>
+
+            <button class="filter" data-category="Flowers">
+                Flowers
+            </button>
+
+            <button class="filter" data-category="Food">
+                Food
+            </button>
+
+            <button class="filter" data-category="Cars">
+                Cars
+            </button>
+
+            <button class="filter" data-category="Favorites">
+                <i class="fa-regular fa-heart"></i>
+                Favorites
+            </button>
+
+        </div>
+
+
+        <div class="gallery-info">
+
+            <span id="resultCount">60 photos</span>
+
+            <span id="currentCategory">
+                All Photos
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section class="gallery" id="gallery"></section>
+
+
+    <section class="empty" id="empty">
+
+        <i class="fa-regular fa-images"></i>
+
+        <h2>No photos found</h2>
+
+        <p>Try a different search or category.</p>
+
+        <button id="resetBtn">
+            Reset Gallery
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="close" id="closeLightbox">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button class="navigation previous" id="previous">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="lightbox-inner">
+
+        <img id="lightboxImage" src="" alt="">
+
+        <div class="lightbox-details">
+
+            <div>
+
+                <span id="lightboxCategory"></span>
+
+                <h2 id="lightboxTitle"></h2>
+
+                <p id="lightboxCounter"></p>
+
+            </div>
+
+            <button id="lightboxFavorite">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <button class="navigation next" id="next">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+</div>
+
+
+<footer>
+
+    <div>
+        <i class="fa-solid fa-camera"></i>
+        FrameFlow
+    </div>
+
+    <span>© 2026 FrameFlow</span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
